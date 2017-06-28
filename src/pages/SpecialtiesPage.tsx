@@ -1,5 +1,5 @@
 import * as React from 'react';
-import CommandHospitalsContainer from '../containers/CommandsList';
+import SpecialtiesContainer from '../containers/SpecialtiesList';
 import {AppPageInterface} from '../components/AppTheme'
 export interface Props {
   appPage: AppPageInterface;
@@ -10,16 +10,18 @@ export interface State {
   
 }
 
-export default class CommandsPage extends React.Component<Props, State>{
+export default class SpecialtiesPage extends React.Component<Props, State>{
 
   componentWillMount(){
-    this.props.setPageTitle("Commands");
+    this.props.setPageTitle("Specialties");
   }
 
   render(){
     console.log(this.props.appPage.screen);
-    return <div style={{backgroundColor: 'white'}}>
-              <CommandHospitalsContainer />
-    </div>;
+    return ( 
+      <div>
+        <SpecialtiesContainer />
+      </div>
+    );
   }
 }

@@ -1,27 +1,25 @@
-import {defaultCommands, defaultCommandIds} from '../res/data/commands';
+import {defaultspecialty, defaultSpecialtyIds} from '../res/data/specialties';
+
 import {
   WINDOW_RESIZE,
   SET_PAGE_TITLE
 } from '../actions';
 import {combineReducers} from 'redux';
-//import {arrayPushUnique,arrayRemove} from './_helper';
 
-
-const hospitals = (state = defaultCommands, action) => {
+const specialties = (state = defaultspecialty, action) => {
   return state;
 }
 
-const hospitalIds = (state = defaultCommandIds, action) => {
+const specialtyIds = (state = defaultSpecialtyIds, action) => {
   return state;
 }
-
 const defaultView = {
   screen: {
     width: 500,
     height: 500
   },
   page: {
-    title: 'Navy Medicine'
+    title: 'Navy MSC'
   }
 }
 const view = (state = defaultView, action) => {
@@ -37,8 +35,8 @@ const view = (state = defaultView, action) => {
 }
 
 const reducer = combineReducers({
-  hospitals,
-  hospitalIds,
+  specialties,
+  specialtyIds,
   view
 });
 

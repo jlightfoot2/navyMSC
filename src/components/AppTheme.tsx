@@ -1,5 +1,4 @@
 import * as React from 'react';
-//import ProductsEdit from '../containers/ProductsEdit';
 import HomePage from '../pages/HomePage';
 import OurStoryPage from '../pages/OurStoryPage';
 import SpecialtiesPage from '../pages/SpecialtiesPage';
