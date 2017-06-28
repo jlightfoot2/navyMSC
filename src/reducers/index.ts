@@ -1,5 +1,6 @@
 import {defaultspecialty, defaultSpecialtyIds} from '../res/data/specialties';
 import {defaultDetailing, defaultDetailingIds} from '../res/data/detailing';
+import {defaultNews, defaultNewsIds} from '../res/data/news';
 
 import {
   WINDOW_RESIZE,
@@ -17,6 +18,12 @@ const detailing = (state = defaultDetailing, action) => {
   return state;
 }
 const detailingIds = (state = defaultDetailingIds, action) => {
+  return state;
+}
+const news = (state = defaultNews, action) => {
+  return state;
+}
+const newsIds = (state = defaultNewsIds, action) => {
   return state;
 }
 
@@ -46,6 +53,8 @@ const reducer = combineReducers({
   specialtyIds,
   detailing,
   detailingIds,
+  news,
+  newsIds,
   view
 });
 

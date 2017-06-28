@@ -2,6 +2,7 @@ import * as React from 'react';
 import DetailingContainer from '../containers/DetailingList';
 import {AppPageInterface} from '../components/AppTheme';
 import AppTitleBar from '../components/AppTitleBar';
+
 export interface Props {
   appPage: AppPageInterface;
   setPageTitle(title: string): void;

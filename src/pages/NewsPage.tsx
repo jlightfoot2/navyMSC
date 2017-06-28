@@ -1,7 +1,11 @@
 import * as React from 'react';
+import NewsContainer from '../containers/NewsList';
+import {AppPageInterface} from '../components/AppTheme';
+import AppTitleBar from '../components/AppTitleBar';
 
 export interface Props {
-  
+  appPage: AppPageInterface;
+  setPageTitle(title: string): void;
 }
 
 export interface State {
@@ -9,21 +13,17 @@ export interface State {
 }
 
 export default class NewsPage extends React.Component<Props, State>{
-  
+
   componentWillMount(){
-    
+    this.props.setPageTitle("News");
   }
 
   render(){
-    return (
+    return ( 
       <div>
-        <div style={{backgroundColor:"#fff",padding:'5px'}}>
-          <h2 style={{padding:'10px 5px 5px',marginTop:0}}><u>The Medical Service Corps</u></h2>
-          <p>The Medical Service Corps (MSC) is the most highly diversified Corps within Navy medicine. An integral part of the Navy, 
-            the Medical Service Corps is comprised of a multidisciplinary team of commissioned Naval Officers in clinical,
-            scientific, and administrative health care fields.</p>
-        </div>
+        <AppTitleBar title="News" />
+        <NewsContainer />
       </div>
-    )
+    );
   }
 }
