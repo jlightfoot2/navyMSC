@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {SpecialtyInterface} from '../res/data/specialties';
-//import {listItemImage} from './commonStyles';
 import {ListItem} from 'material-ui/List';
 
 export interface Props {
@@ -20,7 +19,9 @@ export default class SpecialtyItem extends React.Component<Props, State>{
   render(){
     const {specialty} = this.props;
 
-    return <ListItem primaryText={specialty.title} />
+    return (
+      <ListItem primaryText={specialty.title} />
+    );
   }
 }
 

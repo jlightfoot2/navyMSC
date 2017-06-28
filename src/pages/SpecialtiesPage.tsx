@@ -1,6 +1,7 @@
 import * as React from 'react';
 import SpecialtiesContainer from '../containers/SpecialtiesList';
-import {AppPageInterface} from '../components/AppTheme'
+import {AppPageInterface} from '../components/AppTheme';
+import AppTitleBar from '../components/AppTitleBar';
 export interface Props {
   appPage: AppPageInterface;
   setPageTitle(title: string): void;
@@ -17,9 +18,9 @@ export default class SpecialtiesPage extends React.Component<Props, State>{
   }
 
   render(){
-    console.log(this.props.appPage.screen);
     return ( 
       <div>
+        <AppTitleBar title="Specialties" />
         <SpecialtiesContainer />
       </div>
     );

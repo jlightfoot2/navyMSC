@@ -21,7 +21,7 @@ export default class Specialties extends React.Component<Props, State>{
   render(){
     const {specialties} = this.props;
     return ( 
-      <div>
+      <div style={{backgroundColor:"#fff"}}>
         <List>
           {specialties.map(specialty => {
             return <SpecialtyItem key={specialty.id} specialty={specialty} />

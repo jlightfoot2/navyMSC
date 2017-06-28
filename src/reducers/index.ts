@@ -1,4 +1,5 @@
 import {defaultspecialty, defaultSpecialtyIds} from '../res/data/specialties';
+import {defaultDetailing, defaultDetailingIds} from '../res/data/detailing';
 
 import {
   WINDOW_RESIZE,
@@ -9,10 +10,16 @@ import {combineReducers} from 'redux';
 const specialties = (state = defaultspecialty, action) => {
   return state;
 }
-
 const specialtyIds = (state = defaultSpecialtyIds, action) => {
   return state;
 }
+const detailing = (state = defaultDetailing, action) => {
+  return state;
+}
+const detailingIds = (state = defaultDetailingIds, action) => {
+  return state;
+}
+
 const defaultView = {
   screen: {
     width: 500,
@@ -37,6 +44,8 @@ const view = (state = defaultView, action) => {
 const reducer = combineReducers({
   specialties,
   specialtyIds,
+  detailing,
+  detailingIds,
   view
 });
 

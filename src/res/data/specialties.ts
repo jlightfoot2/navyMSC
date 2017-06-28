@@ -1,6 +1,6 @@
 import {schema, normalize} from 'normalizr';
 import specialtyData from './specialties-data';
-console.log(specialtyData);
+
 const specialtySchema = new schema.Entity('specialty');
 const specialtyArraySchema = new schema.Array(specialtySchema);
 
