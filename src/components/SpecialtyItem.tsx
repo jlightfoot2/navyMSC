@@ -18,9 +18,13 @@ export default class SpecialtyItem extends React.Component<Props, State>{
   
   render(){
     const {specialty} = this.props;
-
+    const listStyle = {
+      margin: 10,
+      border: '1px groove #FBF8F8',
+      padding : "10px 5px"
+    }
     return (
-      <ListItem primaryText={specialty.title} />
+      <ListItem primaryText={specialty.title} style={listStyle} />
     );
   }
 }

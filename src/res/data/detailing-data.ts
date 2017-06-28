@@ -15,10 +15,10 @@ const data =[
   {id:14,name:'CDR Jill Maldarelli-Drey',dept:'Nurse Corps Detailers',content:''},
   {id:15,name:'CAPT Craig Neitzke',dept:'Dental Corps Detailers',content:''},
   {id:16,name:'HM2 Jacob Nieman',dept:'PERS-4415 Administrative Support',content:''},
-  {id:16,name:'CAPT Nanette Rollene',dept:'Medical Corps Detailers',content:''},
-  {id:16,name:'CAPT George Schoeler',dept:'Branch Head',content:''},
-  {id:16,name:'LCDR Andrew Weiss',dept:'Medical Officer (PERS-4415) Placement',content:''},
-  {id:16,name:'LCDR David Wheeler',dept:'Medical Officer (PERS-4415) Placement',content:''}
+  {id:17,name:'CAPT Nanette Rollene',dept:'Medical Corps Detailers',content:''},
+  {id:18,name:'CAPT George Schoeler',dept:'Branch Head',content:''},
+  {id:19,name:'LCDR Andrew Weiss',dept:'Medical Officer (PERS-4415) Placement',content:''},
+  {id:20,name:'LCDR David Wheeler',dept:'Medical Officer (PERS-4415) Placement',content:''}
 ];
 
 export default data;
