@@ -1,0 +1,31 @@
+state data:
+user
+-location/zip
+location
+- is favorite
+
+static data
+location (command)
+- address
+- phone #
+- twitter
+- facebook
+- website
+
+hotlines
+- title
+- phone #
+
+
+Missing Images
+# commands
+images
+'./f12Beaufort.png'.
+icons
+'./f21EmbNMCPortsmouthVA.png'
+
+BackLog
+-Add Facebook and "bookmark" icons w/links
+- add content for Our Story Page
+- add functionality for login (if necessary)
+- add functionality for back button in app bar (non-existant right now)
