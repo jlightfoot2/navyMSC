@@ -1,6 +1,8 @@
 import {defaultspecialty, defaultSpecialtyIds} from '../res/data/specialties';
 import {defaultDetailing, defaultDetailingIds} from '../res/data/detailing';
 import {defaultNews, defaultNewsIds} from '../res/data/news';
+import {defaultPhotos, defaultPhotosIds} from '../res/data/photos';
+import {defaultResources, defaultResourcesIds} from '../res/data/resources';
 
 import {
   WINDOW_RESIZE,
@@ -26,7 +28,18 @@ const news = (state = defaultNews, action) => {
 const newsIds = (state = defaultNewsIds, action) => {
   return state;
 }
-
+const photos = (state = defaultPhotos, action) => {
+  return state;
+}
+const photosIds = (state = defaultPhotosIds, action) => {
+  return state;
+}
+const resources = (state = defaultResources, action) => {
+  return state;
+}
+const resourcesIds = (state = defaultResourcesIds, action) => {
+  return state;
+}
 const defaultView = {
   screen: {
     width: 500,
@@ -55,6 +68,10 @@ const reducer = combineReducers({
   detailingIds,
   news,
   newsIds,
+  photos,
+  photosIds,
+  resources,
+  resourcesIds,
   view
 });
 
