@@ -5,6 +5,7 @@ import OurStoryPage from '../pages/OurStoryPage';
 import SpecialtiesPage from '../pages/SpecialtiesPage';
 import DetailingPage from '../pages/DetailingPage';
 import DetailingContentPage from '../pages/DetailingContentPage';
+import SpecialtiesContentPage from '../pages/SpecialtiesContentPage';
 import NewsPage from '../pages/NewsPage';
 import AroundGlobePage from '../pages/AroundGlobePage';
 import ResourcesPage from '../pages/ResourcesPage';
@@ -120,7 +121,7 @@ class App extends React.Component<Props, State>{
         <Route exact path="/" render={this.renderRouteComponent(HomePage)} />
         <Route path="/our-story" render={this.renderRouteComponent(OurStoryPage)} />
         <Route path="/specialties" render={this.renderRouteComponent(SpecialtiesPage)} />
-        <Route path="/specialties/:sid" render={this.renderRouteComponent(SpecialtiesPage)} />
+        <Route path="/specialties-content/:sid" render={this.renderRouteComponent(SpecialtiesContentPage)} />
         <Route path="/detailing" render={this.renderRouteComponent(DetailingPage)} />
         <Route path="/detailing-content/:did" render={this.renderRouteComponent(DetailingContentPage)} />
         <Route path="/news" render={this.renderRouteComponent(NewsPage)} />

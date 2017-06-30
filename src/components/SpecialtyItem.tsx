@@ -17,8 +17,8 @@ class SpecialtyItem extends React.Component<Props, State>{
     super(props);
   }
 
-  openDetail( props ){
-    props.history.push('/specialties/'+props.specialty.id);
+  openSpecialty( props ){
+    props.history.push('/specialties-content/'+props.specialty.id);
   }
   
   render(){
@@ -29,7 +29,7 @@ class SpecialtyItem extends React.Component<Props, State>{
       padding : "10px 5px"
     }
     return (
-      <ListItem primaryText={specialty.title} style={listStyle} />
+      <ListItem primaryText={specialty.title} style={listStyle} onClick={()=>this.openSpecialty(this.props)} />
     );
   }
 }
