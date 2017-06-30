@@ -1,8 +1,10 @@
 import * as React from 'react';
+import { withRouter } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import OurStoryPage from '../pages/OurStoryPage';
 import SpecialtiesPage from '../pages/SpecialtiesPage';
 import DetailingPage from '../pages/DetailingPage';
+import DetailingContentPage from '../pages/DetailingContentPage';
 import NewsPage from '../pages/NewsPage';
 import AroundGlobePage from '../pages/AroundGlobePage';
 import ResourcesPage from '../pages/ResourcesPage';
@@ -30,13 +32,13 @@ export interface AppPageInterface {
   screen:{width: number, height: number}
 }
 export interface Props {
-
+  params
 }
 
 export interface State {
   screen:{width: number, height: number}
 }
-export default class App extends React.Component<Props, State>{
+class App extends React.Component<Props, State>{
   constructor(props){
     super(props);
     this.state = {
@@ -50,7 +52,8 @@ export default class App extends React.Component<Props, State>{
     }
   }
 
-
+  componentWillMount(){
+  }
 
   componentDidMount(){
     this.handlePageResize();
@@ -117,7 +120,9 @@ export default class App extends React.Component<Props, State>{
         <Route exact path="/" render={this.renderRouteComponent(HomePage)} />
         <Route path="/our-story" render={this.renderRouteComponent(OurStoryPage)} />
         <Route path="/specialties" render={this.renderRouteComponent(SpecialtiesPage)} />
+        <Route path="/specialties/:sid" render={this.renderRouteComponent(SpecialtiesPage)} />
         <Route path="/detailing" render={this.renderRouteComponent(DetailingPage)} />
+        <Route path="/detailing-content/:did" render={this.renderRouteComponent(DetailingContentPage)} />
         <Route path="/news" render={this.renderRouteComponent(NewsPage)} />
         <Route path="/around-the-globe" render={this.renderRouteComponent(AroundGlobePage)} />
         <Route path="/resources" render={this.renderRouteComponent(ResourcesPage)} />
@@ -128,3 +133,5 @@ export default class App extends React.Component<Props, State>{
  
   }
 }
+
+export default withRouter(App);

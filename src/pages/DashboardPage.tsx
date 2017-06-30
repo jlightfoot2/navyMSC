@@ -10,31 +10,26 @@ const aglobeImage = require("../res/images/ui/button-around-globe.png");
 const resourcesImage = require("../res/images/ui/button-resources.png");
 const chiefImg = require("../res/images/ui/button-ask-chief.png");
 
-export interface Props {
-
-}
-
-export interface State {
-  
-}
+export interface Props {}
+export interface State {}
 
 export default class DashboardPage extends React.Component<Props, State>{
-  componentDidMount(){
-   
-  }
   render(){
     const buttonRowSpacing = {
       margin: '40px auto 40px auto',
       padding: '40px auto 40px auto',
-      width : '60%'
+      width : '80%',
+      maxWidth: 600
     }
     const smallImageLeft = {
-      maxWidth : 200,
+      width : '48%',
+      maxWidth : 244,
       float : 'left',
       marginBottom: '20px'
     }
     const smallImageRight = {
-      maxWidth : 200,
+      width : '48%',
+      maxWidth : 244,
       float : 'right',
       marginBottom: '20px'
     }
@@ -69,7 +64,6 @@ export default class DashboardPage extends React.Component<Props, State>{
             <Link to="/resources"><img src={resourcesImage} style={smallImageRight}/></Link>
           </div>
         </div>
-
         <div style={askChiefWrapper}>
           <div style={chiefImgWrapper}>
             <Link to="/ask-the-chief"><img src={chiefImg} /></Link>

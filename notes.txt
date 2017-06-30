@@ -28,4 +28,4 @@ BackLog
 -Add Facebook and "bookmark" icons w/links
 - add content for Our Story Page
 - add functionality for login (if necessary)
-- add functionality for back button in app bar (non-existant right now)
+- detail page needs subtitle under name, some have it, most do not.

@@ -1,23 +1,16 @@
 import * as React from 'react';
 import AppLogoBar  from '../components/AppLogoBar';
+import AppTitleBar from '../components/AppTitleBar';
 
-export interface Props {
-  
-}
+export interface Props {}
 
-export interface State {
-  
-}
+export interface State {}
 
 export default class OurStoryPage extends React.Component<Props, State>{
-  
-  componentWillMount(){
-    
-  }
-
   render(){
     return (
       <div>
+        <AppTitleBar title=""/>
         <AppLogoBar/>
         <div style={{backgroundColor:"#fff",padding:'5px'}}>
           <h2 style={{padding:'10px 5px 5px',marginTop:0}}><u>The Medical Service Corps</u></h2>

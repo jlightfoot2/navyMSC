@@ -20,7 +20,6 @@ export default class DetailingComponent extends React.Component<Props, State>{
   
   render(){
     const {detailing} = this.props;
-    console.log(detailing);
     return ( 
       <div style={{backgroundColor:"#fff"}}>
         <List>

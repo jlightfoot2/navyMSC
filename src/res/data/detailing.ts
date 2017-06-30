@@ -8,7 +8,8 @@ export interface DetailingInterface{
   id: number;
   name: string;
   dept : string;
-  content: string;
+  area: string;
+  email : string;
 }
 
 export const normalizedDetailing = normalize(detailingData, detailingArraySchema);

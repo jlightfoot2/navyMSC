@@ -1,5 +1,5 @@
 const data =[
-  {id:1,title:'Navy Employer Recognition Event held in Norfolk',content:'',link:''},
+  {id:1,title:'Navy Employer Recognition Event held in Maine',content:'',link:''},
   {id:2,title:'NAVCENT Sailors Certified in "Cuisine Diplomacy"',content:'',link:''},
   {id:3,title:'NAVFAC Marianas Environmental Specialists, Navy Salvage Divers Clear Submerged Wreckage from Guam\'s Waters during DIVEX 2017',content:'',link:''},
   {id:4,title:'Columbus visits Singapore during Indo-Asia-Pacific Deployment',content:'',link:''},

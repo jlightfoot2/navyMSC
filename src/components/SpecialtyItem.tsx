@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {SpecialtyInterface} from '../res/data/specialties';
+import { withRouter } from 'react-router-dom';
 import {ListItem} from 'material-ui/List';
 
 export interface Props {
@@ -10,10 +11,14 @@ export interface State {
 
 }
 
-export default class SpecialtyItem extends React.Component<Props, State>{
+class SpecialtyItem extends React.Component<Props, State>{
 
   constructor(props){
     super(props);
+  }
+
+  openDetail( props ){
+    props.history.push('/specialties/'+props.specialty.id);
   }
   
   render(){
@@ -29,3 +34,4 @@ export default class SpecialtyItem extends React.Component<Props, State>{
   }
 }
 
+export default withRouter(SpecialtyItem);
