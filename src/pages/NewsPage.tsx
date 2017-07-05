@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { withRouter } from 'react-router-dom';
 import NewsContainer from '../containers/NewsList';
 import {AppPageInterface} from '../components/AppTheme';
 import AppTitleBar from '../components/AppTitleBar';
@@ -12,7 +13,7 @@ export interface State {
   
 }
 
-export default class NewsPage extends React.Component<Props, State>{
+class NewsPage extends React.Component<Props, State>{
 
   componentWillMount(){
     this.props.setPageTitle("News");
@@ -27,3 +28,4 @@ export default class NewsPage extends React.Component<Props, State>{
     );
   }
 }
+export default withRouter(NewsPage);

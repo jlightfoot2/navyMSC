@@ -10,7 +10,8 @@ const aglobeImage = require("../res/images/ui/button-around-globe.png");
 const resourcesImage = require("../res/images/ui/button-resources.png");
 const chiefImg = require("../res/images/ui/button-ask-chief.png");
 
-export interface Props {}
+export interface Props {
+}
 export interface State {}
 
 export default class DashboardPage extends React.Component<Props, State>{
@@ -34,22 +35,22 @@ export default class DashboardPage extends React.Component<Props, State>{
       marginBottom: '20px'
     }
     const askChiefWrapper = {
-      width:'100%',
-      backgroundColor: '#1E1C1D'
+      width:'100%'
     }
     const chiefImgWrapper = {
-      maxWidth : 640,
-      margin : '0 auto'
+      width : '100%',
+      paddingRight : '5px',
+      backgroundColor: '#1E1C1D'
     }
     const buttonsWrapper = {
       backgroundColor: '#1b4583',
-      margin: '0px auto 0px auto',
       width : '100%',
-      float: 'left'
+      float: 'left',
+      padding : '5px'
     }
     return (
-      <div>
-       <AppLogoBar/>
+      <div style={{position:'relative'}}>
+       <AppLogoBar hasPaddingTop={false}/>
         <div style={buttonsWrapper}>
           <div style={buttonRowSpacing} className="clearfix">
             <Link to="/our-story"><img src={ourStoryImage} style={smallImageLeft}/></Link>
@@ -66,7 +67,7 @@ export default class DashboardPage extends React.Component<Props, State>{
         </div>
         <div style={askChiefWrapper}>
           <div style={chiefImgWrapper}>
-            <Link to="/ask-the-chief"><img src={chiefImg} /></Link>
+            <Link to="/ask-the-chief"><img src={chiefImg} style={{width:'100%'}} /></Link>
           </div>
         </div>
       </div>

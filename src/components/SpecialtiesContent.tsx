@@ -6,9 +6,7 @@ export interface Props {
   specialties: SpecialtyInterface[];
 }
 
-export interface State {
-
-}
+export interface State {}
 
 class SpecialtiesComponent extends React.Component<Props, State>{
   private path : any;
@@ -27,7 +25,7 @@ class SpecialtiesComponent extends React.Component<Props, State>{
     })[0];
     return ( 
       <div>
-        <div style={{width:'90%', margin:'0 auto',color:'#fff'}}>
+        <div style={{width:'90%', margin:'0 auto',color:'#fff', paddingTop:50}}>
           <h2 style={{marginTop:0,paddingTop:10}}>{specialtyContent.title}</h2>
         </div>
         <div style={{backgroundColor:"#fff",width:'100%',padding:'0 0 10px',minHeight:540}}>

@@ -21,7 +21,7 @@ export default class ResourcessList extends React.Component<Props, State>{
   render(){
     const {resources} = this.props;
     return (
-      <div style={{backgroundColor:"#fff"}}>
+      <div style={{backgroundColor:"#fff", paddingTop:50}}>
         <List>
           {resources.map(resource => {
             return <ResourcesItem key={resource.id} resources={resource} />

@@ -21,7 +21,7 @@ export default class PhotosList extends React.Component<Props, State>{
   render(){
     const {photos} = this.props;
     return ( 
-      <div style={{backgroundColor:"#fff"}}>
+      <div style={{backgroundColor:"#fff", paddingTop:50}}>
         <List>
           {photos.map(photo => {
             return <PhotosItem key={photo.id} photos={photo} />

@@ -7,6 +7,7 @@ const detailingArraySchema = new schema.Array(detailingSchema);
 export interface DetailingInterface{
   id: number;
   name: string;
+  title : string;
   dept : string;
   area: string;
   email : string;

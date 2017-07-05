@@ -7,8 +7,8 @@ const ArraySchema = new schema.Array(Schema);
 export interface ResourcesInterface{
   id: number;
   title: string;
-  content: string;
   link : string;
+  isExternal : boolean;
 }
 
 export const normalizedResources = normalize(resourceData, ArraySchema);

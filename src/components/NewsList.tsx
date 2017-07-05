@@ -21,7 +21,7 @@ export default class NewsList extends React.Component<Props, State>{
   render(){
     const {news} = this.props;
     return ( 
-      <div style={{backgroundColor:"#fff"}}>
+      <div style={{backgroundColor:"#fff", paddingTop:50}}>
         <List>
           {news.map(newsItem => {
             return <NewsItem key={newsItem.id} news={newsItem} />

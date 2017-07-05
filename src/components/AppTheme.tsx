@@ -7,7 +7,9 @@ import DetailingPage from '../pages/DetailingPage';
 import DetailingContentPage from '../pages/DetailingContentPage';
 import SpecialtiesContentPage from '../pages/SpecialtiesContentPage';
 import NewsPage from '../pages/NewsPage';
+import NewsContentPage from '../pages/NewsContentPage';
 import AroundGlobePage from '../pages/AroundGlobePage';
+import PhotosContentPage from '../pages/PhotosContentPage';
 import ResourcesPage from '../pages/ResourcesPage';
 import AskChiefPage from '../pages/AskChiefPage';
 import { Route } from 'react-router-dom';
@@ -125,7 +127,9 @@ class App extends React.Component<Props, State>{
         <Route path="/detailing" render={this.renderRouteComponent(DetailingPage)} />
         <Route path="/detailing-content/:did" render={this.renderRouteComponent(DetailingContentPage)} />
         <Route path="/news" render={this.renderRouteComponent(NewsPage)} />
+        <Route path="/news-content" render={this.renderRouteComponent(NewsContentPage)} />
         <Route path="/around-the-globe" render={this.renderRouteComponent(AroundGlobePage)} />
+        <Route path="/around-the-globe-content/:aid" render={this.renderRouteComponent(PhotosContentPage)} />
         <Route path="/resources" render={this.renderRouteComponent(ResourcesPage)} />
         <Route path="/ask-the-chief" render={this.renderRouteComponent(AskChiefPage)} />
       </div>

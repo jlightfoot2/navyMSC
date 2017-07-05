@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { withRouter } from 'react-router-dom';
 import ResourcesContainer from '../containers/ResourcesList';
 import {AppPageInterface} from '../components/AppTheme';
 import AppTitleBar from '../components/AppTitleBar';
@@ -12,7 +13,7 @@ export interface State {
   
 }
 
-export default class ResourcesPage extends React.Component<Props, State>{
+class ResourcesPage extends React.Component<Props, State>{
 
   componentWillMount(){
     this.props.setPageTitle("Resources");
@@ -27,3 +28,5 @@ export default class ResourcesPage extends React.Component<Props, State>{
     );
   }
 }
+
+export default withRouter(ResourcesPage);

@@ -6,9 +6,8 @@ const ArraySchema = new schema.Array(Schema);
 
 export interface PhotosInterface{
   id: number;
-  title: string;
   content: string;
-  link : string;
+  src : string;
 }
 
 export const normalizedPhotos = normalize(resourceData, ArraySchema);

@@ -21,7 +21,7 @@ export default class DetailingComponent extends React.Component<Props, State>{
   render(){
     const {detailing} = this.props;
     return ( 
-      <div style={{backgroundColor:"#fff"}}>
+      <div style={{backgroundColor:"#fff", paddingTop:50}}>
         <List>
           {detailing.map(detail => {
             return <DetailingItem key={detail.id} detailing={detail} />

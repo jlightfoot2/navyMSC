@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { withRouter } from 'react-router-dom';
 import {ResourcesInterface} from '../res/data/resources';
 import {ListItem} from 'material-ui/List';
 
@@ -10,12 +11,18 @@ export interface State {
 
 }
 
-export default class ResourcesItem extends React.Component<Props, State>{
+class ResourcesItem extends React.Component<Props, State>{
 
   constructor(props){
     super(props);
   }
-  
+  resourceLinkClick(url,isExternal,props){
+    if(isExternal){
+      window.open(url,'_blank');
+    }else{
+      props.history.push(url);
+    }
+  }
   render(){
     const {resources} = this.props;
     const listStyle = {
@@ -24,8 +31,9 @@ export default class ResourcesItem extends React.Component<Props, State>{
       padding : "10px 5px"
     }
     return (
-      <ListItem primaryText={resources.title} style={listStyle} />
+      <ListItem primaryText={resources.title} style={listStyle} onTouchTap={()=>this.resourceLinkClick(resources.link,resources.isExternal,this.props)}/>
     );
   }
 }
 
+export default withRouter(ResourcesItem);

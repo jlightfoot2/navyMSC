@@ -26,6 +26,6 @@ icons
 
 BackLog
 -Add Facebook and "bookmark" icons w/links
-- add content for Our Story Page
 - add functionality for login (if necessary)
-- detail page needs subtitle under name, some have it, most do not.
+- position AppBar absolute at top so it stays with scrolling. 
+- Add bookmark functionality

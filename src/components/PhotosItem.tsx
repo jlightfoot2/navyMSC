@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { withRouter } from 'react-router-dom';
 import {PhotosInterface} from '../res/data/photos';
 import {ListItem} from 'material-ui/List';
 
@@ -10,22 +11,32 @@ export interface State {
 
 }
 
-export default class PhotosItem extends React.Component<Props, State>{
-
+class PhotosItem extends React.Component<Props, State>{
+  public state = {
+    open : false
+  };
   constructor(props){
     super(props);
   }
-  
+  itemImage(photo){
+    return <img style={{width:'100%'}} src={require('../res/images/around-the-world/' + photo.src)} />;
+  }
+  linkToPhotoContent(props){
+    props.history.push('/around-the-globe-content/'+props.photos.id);
+  }
   render(){
     const {photos} = this.props;
     const listStyle = {
       margin: 10,
-      border: '1px groove #FBF8F8',
       padding : "10px 5px"
     }
     return (
-      <ListItem primaryText={photos.title} style={listStyle} />
+      <div style={listStyle}>
+        <ListItem primaryText={this.itemImage(photos)} onTouchTap={()=>this.linkToPhotoContent(this.props)}/>
+      </div>
     );
   }
 }
 
+
+export default withRouter(PhotosItem);

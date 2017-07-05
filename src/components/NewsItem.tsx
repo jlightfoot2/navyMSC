@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { withRouter } from 'react-router-dom';
 import {NewsInterface} from '../res/data/news';
 import {ListItem} from 'material-ui/List';
 
@@ -10,10 +11,14 @@ export interface State {
 
 }
 
-export default class NewsItem extends React.Component<Props, State>{
+class NewsItem extends React.Component<Props, State>{
 
   constructor(props){
     super(props);
+  }
+  
+  openDetail( props ){
+    props.history.push('/news-content/'+props.news.id);
   }
   
   render(){
@@ -24,8 +29,10 @@ export default class NewsItem extends React.Component<Props, State>{
       padding : "10px 5px"
     }
     return (
-      <ListItem primaryText={news.title} style={listStyle} />
+      <ListItem primaryText={news.title} style={listStyle} 
+        onClick={() => this.openDetail(this.props)} />
     );
   }
 }
 
+export default withRouter(NewsItem);
