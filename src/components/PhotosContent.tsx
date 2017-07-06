@@ -22,7 +22,6 @@ class PhotosContentComponent extends React.Component<Props, State>{
     window.open(url,'_blank');
   }
   render(){
-    console.log(this.props);
     const {photos} = this.props;
     const photosId = parseInt(this.path[2]);
     let photosContent = photos.filter(photosItem => {

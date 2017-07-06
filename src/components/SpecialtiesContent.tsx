@@ -17,6 +17,9 @@ class SpecialtiesComponent extends React.Component<Props, State>{
   componentWillMount(){
     this.path = this.props['location'].pathname.split('/');
   }
+  createContent(content){
+    return {__html: content};
+  }
   render(){
     const {specialties} = this.props;
     const specId = parseInt(this.path[2]);
@@ -28,8 +31,8 @@ class SpecialtiesComponent extends React.Component<Props, State>{
         <div style={{width:'90%', margin:'0 auto',color:'#fff', paddingTop:50}}>
           <h2 style={{marginTop:0,paddingTop:10}}>{specialtyContent.title}</h2>
         </div>
-        <div style={{backgroundColor:"#fff",width:'100%',padding:'0 0 10px',minHeight:540}}>
-          {specialtyContent.content}
+        <div style={{backgroundColor:"#fff",width:'100%',padding:'10px',minHeight:540}} 
+          dangerouslySetInnerHTML={this.createContent(specialtyContent.content)}>
         </div>
       </div>
     );
