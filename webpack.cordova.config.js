@@ -14,7 +14,7 @@ module.exports = {
     output: {
         filename: "bundle.js",
         path: buildPath,
-        publicPath: '/'
+        publicPath: './'
     },
 
     // Enable sourcemaps for debugging webpack's output.
