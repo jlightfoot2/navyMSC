@@ -16,7 +16,7 @@ module.exports = {
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, 'dist'),
-        publicPath: './'
+        publicPath: '/'
     },
     devServer: {
         hot: true,
@@ -25,7 +25,7 @@ module.exports = {
         contentBase: path.resolve(__dirname, 'dist'),
         // match the output path
 
-        publicPath: './'
+        publicPath: '/'
         // match the output `publicPath`
     },
 
@@ -66,7 +66,7 @@ module.exports = {
             'NODE_ENV': JSON.stringify('dev')
           },
           '__DEVTOOLS__': true,
-          '__INCLUDE_SERVICE_WORKER__': false
+          '__IS_CORDOVA_BUILD__': false
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),

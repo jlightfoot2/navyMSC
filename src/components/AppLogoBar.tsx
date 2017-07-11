@@ -6,8 +6,7 @@ export interface Props {
   hasPaddingTop: boolean;
 }
 
-export interface State {
-}
+export interface State {}
 
 export default class AppLogoBar extends React.Component<Props, State>{
   render(){

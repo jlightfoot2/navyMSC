@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import NewsComponent from '../components/NewsList';
+import fetchNews from '../actions/news';
 
 const stateToProps = (state,ownProps) => {
   return {
@@ -8,7 +9,9 @@ const stateToProps = (state,ownProps) => {
 }
 const dispatchToProps = (dispatch,ownProps) => {
   return {
-    
+    fetchNews: () => {
+      dispatch( fetchNews() )
+    }
   }
 }
 

@@ -7,9 +7,7 @@ export interface Props {
   news: NewsInterface[];
 }
 
-export interface State {
-
-}
+export interface State {}
 
 export default class NewsList extends React.Component<Props, State>{
 

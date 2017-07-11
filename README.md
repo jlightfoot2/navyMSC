@@ -1,1 +1,1 @@
-# Navy MSC Cordova App using React
+# navy-mtf

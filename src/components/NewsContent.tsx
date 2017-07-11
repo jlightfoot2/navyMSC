@@ -23,7 +23,6 @@ class NewsContentComponent extends React.Component<Props, State>{
     window.open(url,'_blank');
   }
   render(){
-    console.log(this.props);
     const {news} = this.props;
     const newsId = parseInt(this.path[2]);
     let newsContent = news.filter(newsItem => {
@@ -34,7 +33,7 @@ class NewsContentComponent extends React.Component<Props, State>{
         <div style={{width:'100%', margin:'0 auto',color:'#000', backgroundColor:'#F6F0F0',padding:5}}>
           <h2 style={{margin:'0px',padding:'10px', backgroundColor:'#F6F0F0'}}>{newsContent.title}</h2>
         </div>
-        <div style={{backgroundColor:"#fff",width:'100%',padding:'5px 0 10px 5px',minHeight:385, position:'relative'}}>
+        <div style={{backgroundColor:"#fff",width:'100%',padding:'5px 0 10px 5px',minHeight:360, position:'relative'}}>
           {newsContent.content}
           <RaisedButton  label="Learn More"
             backgroundColor='#1b4583' 

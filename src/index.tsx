@@ -9,6 +9,7 @@ OfflinePluginRuntime.install();
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import App from './components/AppTheme';
+import fetchNews from './actions/news';
 
 import reducer from './reducers';
 
@@ -20,6 +21,7 @@ const store = createStore(reducer,applyMiddleware(thunk));
 store.subscribe(() => {
     console.log(store.getState()); // list entire state of app
 });
+store.dispatch(fetchNews());
 
 const render = (Component: any) => {
     ReactDOM.render(

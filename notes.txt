@@ -23,9 +23,3 @@ images
 './f12Beaufort.png'.
 icons
 './f21EmbNMCPortsmouthVA.png'
-
-BackLog
--Add Facebook and "bookmark" icons w/links
-- add functionality for login (if necessary)
-- position AppBar absolute at top so it stays with scrolling. 
-- Add bookmark functionality
