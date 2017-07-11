@@ -24,11 +24,16 @@ export default class AppLogoBar extends React.Component<Props, State>{
       maxWidth : 245,
       margin : '0 auto'
     }
+    const logoWrapperPaddedTop = {
+      maxWidth : 245,
+      margin : '0 auto',
+      paddingTop: 10  
+    }
     const {hasPaddingTop} = this.props;
     return (
       <div>
          <div style={(hasPaddingTop) ? logoHeaderWrapper : logoHeaderWrapperNoTopPadding}>
-          <div style={logoWrapper}>
+          <div style={(hasPaddingTop) ? logoWrapper : logoWrapperPaddedTop}>
             <img src={logoImg}/>
           </div>
         </div>

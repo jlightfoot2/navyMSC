@@ -12,7 +12,7 @@ module.exports = {
     ],
 
     output: {
-        filename: "bundle.js",
+        filename: "./bundle.js",
         path: buildPath
     },
 

@@ -1,14 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="org.tee2.navymedicine" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Navy Medicine</name>
+    <name>Navy MSC</name>
     <description>
-        Navy Medicine
+        Navy MSC
     </description>
     <author email="dave.coleman@tee2.org" href="http://tee2.org">
         T2
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <access launch-external="yes" origin="mailto:*" />
+    <access launch-external="yes" origin="http://www.navy.mil/*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
