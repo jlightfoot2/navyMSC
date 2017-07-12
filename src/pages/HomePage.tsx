@@ -6,6 +6,7 @@ import SplashPage from './SplashPage';
 export interface Props {
   appPage: AppPageInterface;
   setPageTitle(title: string): void;
+  view;
 }
 
 export interface State {
@@ -21,9 +22,10 @@ export default class Home extends React.Component<Props, State>{
   }
 
   render(){
+    const {appPage} = this.props;
     return (
       <div>
-        {this.isAuthenticated ? <DashboardPage/> : <SplashPage/>}
+        {this.isAuthenticated ? <DashboardPage appPage={appPage}/> : <SplashPage/>}
       </div>
     )
   }

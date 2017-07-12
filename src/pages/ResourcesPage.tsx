@@ -8,16 +8,9 @@ export interface Props {
   appPage: AppPageInterface;
   setPageTitle(title: string): void;
 }
-
-export interface State {
-  
-}
+export interface State {}
 
 class ResourcesPage extends React.Component<Props, State>{
-
-  componentWillMount(){
-    this.props.setPageTitle("Resources");
-  }
 
   render(){
     return ( 

@@ -53,7 +53,7 @@ export default function fetchNews() {
     // In this case, we return a promise to wait for.
     // This is not required by thunk middleware, but it is convenient for us.
     var newsItems = [];
-    return fetch('http://www.navy.mil/xml/rssHeadline.xml').then(function(resp){ return resp; }).then(function(response){
+    return fetch('http://www.navy.mil/xml/rssFeatureStories.asp').then(function(resp){ return resp; }).then(function(response){
         // parse response
         return response.text().then(function(data){
           var oParser = new DOMParser();

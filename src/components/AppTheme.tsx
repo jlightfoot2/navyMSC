@@ -11,6 +11,7 @@ import NewsContentPage from '../pages/NewsContentPage';
 import AroundGlobePage from '../pages/AroundGlobePage';
 import PhotosContentPage from '../pages/PhotosContentPage';
 import ResourcesPage from '../pages/ResourcesPage';
+import PdfViewerPage from '../pages/PdfViewerPage';
 import AskChiefPage from '../pages/AskChiefPage';
 import { Route } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -131,6 +132,7 @@ class App extends React.Component<Props, State>{
         <Route path="/around-the-globe" render={this.renderRouteComponent(AroundGlobePage)} />
         <Route path="/around-the-globe-content/:aid" render={this.renderRouteComponent(PhotosContentPage)} />
         <Route path="/resources" render={this.renderRouteComponent(ResourcesPage)} />
+        <Route exact path="/pdf/:file" render={this.renderRouteComponent(PdfViewerPage)} />
         <Route path="/ask-the-chief" render={this.renderRouteComponent(AskChiefPage)} />
       </div>
     </div>

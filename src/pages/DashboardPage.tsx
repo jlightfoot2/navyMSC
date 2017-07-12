@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom';
 import AppLogoBar  from '../components/AppLogoBar';
+import {AppPageInterface} from '../components/AppTheme';
 
 const ourStoryImage = require("../res/images/ui/button-our-story.png");
 const specialtiesImage = require("../res/images/ui/button-specialties.png");
@@ -12,11 +13,13 @@ const chiefImg = require("../res/images/ui/button-ask-chief.png");
 const fbImage = require("../res/images/ui/msc-facebook-centered.png");
 
 export interface Props {
+  appPage: AppPageInterface;
 }
 export interface State {}
 
 export default class DashboardPage extends React.Component<Props, State>{
   render(){
+    const {appPage} = this.props;
     const buttonRowSpacing = {
       margin: '16px auto 16px auto',
       padding: '16px auto 16px auto',
@@ -48,8 +51,10 @@ export default class DashboardPage extends React.Component<Props, State>{
       backgroundColor: '#1b4583',
       width : '100%',
       float: 'left',
-      padding : '5px'
+      padding : '5px',
+      minHeight: (appPage.screen.height - 218)
     }
+    console.log(this.props);
     return (
       <div style={{position:'relative'}}>
        <AppLogoBar hasPaddingTop={false}/>
@@ -66,7 +71,7 @@ export default class DashboardPage extends React.Component<Props, State>{
             <Link to="/around-the-globe"><img src={aglobeImage} style={smallImageLeft}/></Link>
             <Link to="/resources"><img src={resourcesImage} style={smallImageRight}/></Link>
           </div>
-          <div style={{width:'80%',margin:'0 auto', maxWidth:90, height:90, paddingBottom:20}} className="clearfix">
+          <div style={{width:'80%',margin:'0 auto', maxWidth:80, height:80, paddingBottom:20}} className="clearfix">
             <a href="https://www.facebook.com/groups/usnavymsc/" target="_blank"><img style={{maxWidth:90, marginRight:'20%'}} src={fbImage}/></a>
           </div>
         </div>

@@ -30,7 +30,7 @@ module.exports = {
             {test: /\.tsx?$/, use: ['awesome-typescript-loader'] },
 
             {
-                test: /\.(png|gif|jpe?g|svg)$/i,
+                test: /\.(pdf|png|gif|jpe?g|svg)$/i,
                 use: ['url-loader?limit=2']
             },
             {
