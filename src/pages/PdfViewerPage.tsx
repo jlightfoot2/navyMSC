@@ -30,7 +30,7 @@ class PdfViewerPage extends React.Component<Props, State>{
   componentWillMount(){
     let path = this.props['location'].pathname.split('/');
     this.title = path[2].replace('.pdf','').replace(/_/gi,' ');
-    this.file = require('../' + path[2] );
+    this.file = require('../res/files/' + path[2] );
     
     this.setState({
       totalPages : 0,

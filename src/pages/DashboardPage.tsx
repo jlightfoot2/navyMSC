@@ -18,8 +18,12 @@ export interface Props {
 export interface State {}
 
 export default class DashboardPage extends React.Component<Props, State>{
+  setMaxHeight(){
+    let scrHeight = this.props.appPage.screen.height,
+      multi = ( scrHeight > 700 ) ? .65 : .59;
+    return ( scrHeight * multi );
+  }
   render(){
-    const {appPage} = this.props;
     const buttonRowSpacing = {
       margin: '16px auto 16px auto',
       padding: '16px auto 16px auto',
@@ -51,10 +55,10 @@ export default class DashboardPage extends React.Component<Props, State>{
       backgroundColor: '#1b4583',
       width : '100%',
       float: 'left',
-      padding : '5px',
-      minHeight: (appPage.screen.height - 218)
+      padding : '35px 5px 0',
+      minHeight: this.setMaxHeight()
     }
-    console.log(this.props);
+    const fbIconSize = (this.props.appPage.screen.height > 700 ) ? 90 : 78;
     return (
       <div style={{position:'relative'}}>
        <AppLogoBar hasPaddingTop={false}/>
@@ -71,8 +75,8 @@ export default class DashboardPage extends React.Component<Props, State>{
             <Link to="/around-the-globe"><img src={aglobeImage} style={smallImageLeft}/></Link>
             <Link to="/resources"><img src={resourcesImage} style={smallImageRight}/></Link>
           </div>
-          <div style={{width:'80%',margin:'0 auto', maxWidth:80, height:80, paddingBottom:20}} className="clearfix">
-            <a href="https://www.facebook.com/groups/usnavymsc/" target="_blank"><img style={{maxWidth:90, marginRight:'20%'}} src={fbImage}/></a>
+          <div style={{width:'80%',margin:'0 auto', maxWidth:fbIconSize, height:fbIconSize, paddingBottom:20}} className="clearfix">
+            <a href="https://www.facebook.com/groups/usnavymsc/" target="_blank"><img style={{maxWidth:fbIconSize, marginRight:'20%'}} src={fbImage}/></a>
           </div>
         </div>
         <div style={askChiefWrapper}>

@@ -15,12 +15,19 @@ export default class NewsList extends React.Component<Props, State>{
     super(props);
 
   }
-  
+  error(){
+    return (
+      <div style={{padding:30, minHeight:300}}>
+        <p>Something went wrong!  An internet connection is required to access the news feed. Please check your connection and try again.</p>
+      </div>
+    )
+  }
   render(){
     const {news} = this.props;
     return ( 
       <div style={{backgroundColor:"#fff", paddingTop:50}}>
         <List>
+          { (news.length < 1) ? this.error() : '' }
           {news.map(newsItem => {
             return <NewsItem key={newsItem.id} news={newsItem} />
           })}
