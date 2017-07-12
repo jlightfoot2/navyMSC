@@ -9,6 +9,7 @@ const newsImage = require("../res/images/ui/button-news.png");
 const aglobeImage = require("../res/images/ui/button-around-globe.png");
 const resourcesImage = require("../res/images/ui/button-resources.png");
 const chiefImg = require("../res/images/ui/button-ask-chief.png");
+const fbImage = require("../res/images/ui/msc-facebook-centered.png");
 
 export interface Props {
 }
@@ -17,8 +18,8 @@ export interface State {}
 export default class DashboardPage extends React.Component<Props, State>{
   render(){
     const buttonRowSpacing = {
-      margin: '40px auto 40px auto',
-      padding: '40px auto 40px auto',
+      margin: '16px auto 16px auto',
+      padding: '16px auto 16px auto',
       width : '80%',
       maxWidth: 600
     }
@@ -40,7 +41,8 @@ export default class DashboardPage extends React.Component<Props, State>{
     const chiefImgWrapper = {
       width : '100%',
       paddingRight : '5px',
-      backgroundColor: '#1E1C1D'
+      backgroundColor: '#1E1C1D',
+      marginTop: 10
     }
     const buttonsWrapper = {
       backgroundColor: '#1b4583',
@@ -63,6 +65,9 @@ export default class DashboardPage extends React.Component<Props, State>{
           <div style={buttonRowSpacing} className="clearfix">
             <Link to="/around-the-globe"><img src={aglobeImage} style={smallImageLeft}/></Link>
             <Link to="/resources"><img src={resourcesImage} style={smallImageRight}/></Link>
+          </div>
+          <div style={{width:'80%',margin:'0 auto', maxWidth:90, height:90, paddingBottom:20}} className="clearfix">
+            <a href="https://www.facebook.com/groups/usnavymsc/" target="_blank"><img style={{maxWidth:90, marginRight:'20%'}} src={fbImage}/></a>
           </div>
         </div>
         <div style={askChiefWrapper}>
