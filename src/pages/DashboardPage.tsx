@@ -24,6 +24,7 @@ export default class DashboardPage extends React.Component<Props, State>{
     return ( scrHeight * multi );
   }
   render(){
+    //@todo move all of my styles to a folder and do imports and combines (eg styles={[style1,style2]})
     const buttonRowSpacing = {
       margin: '16px auto 16px auto',
       padding: '16px auto 16px auto',
