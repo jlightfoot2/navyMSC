@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import {AppPageInterface} from '../components/AppTheme';
 import AppTitleBar from '../components/AppTitleBar';
 import ReactPDF from 'react-pdf';
-import IconButton from 'material-ui/IconButton';
 import {NavigationChevronLeft} from 'material-ui/svg-icons';
 import {NavigationChevronRight} from 'material-ui/svg-icons';
 
@@ -60,25 +59,33 @@ class PdfViewerPage extends React.Component<Props, State>{
       backgroundColor:'#fff', 
       minHeight: this.props.appPage.screen.height - 60
     }
+    const svgNavChevronStyles = {
+      height : 90,
+      width : 90,
+      opacity : 0.6
+    }
     return ( 
       <div>
         <AppTitleBar title={this.title} />
         <div style={PDFWrapper}>
-        <div>
-          <IconButton onTouchTap={()=>this.decrementPage()}>
-            <NavigationChevronLeft/>
-          </IconButton>
-          <IconButton onTouchTap={()=>this.incrementPage()}>
-            <NavigationChevronRight/>
-          </IconButton>
-        </div>
-          <ReactPDF 
-            file={this.file} 
-            width={this.props.appPage.screen.width} 
-            pageIndex={this.state.pageIndex} 
-            onDocumentLoad={(t)=>{this.onDocumentLoad(t)}}
-            onPageLoad={(p)=>{this.onPageLoad(p)}}
-          />
+          <div>
+            <div style={{position:'absolute', top:'40%', left:'-25px'}}>
+              <NavigationChevronLeft style={svgNavChevronStyles} onClick={()=>this.decrementPage()}/>
+            </div>
+            <div style={{position:'absolute', top:'40%', right:'-25px'}}>
+              <NavigationChevronRight style={svgNavChevronStyles} onClick={()=>this.incrementPage()}/>
+            </div>
+          </div>
+          <div style={{width:this.props.appPage.screen.width-25,margin:'0 auto'}}>
+            <ReactPDF style={{marginLeft:25}}
+              file={this.file} 
+              width={this.props.appPage.screen.width-25} 
+              pageIndex={this.state.pageIndex} 
+              onDocumentLoad={(t)=>{this.onDocumentLoad(t)}}
+              onPageLoad={(p)=>{this.onPageLoad(p)}}
+              scale={0.5}
+            />
+          </div>
         </div>
       </div>
     );
