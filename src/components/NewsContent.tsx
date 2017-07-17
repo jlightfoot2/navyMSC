@@ -22,6 +22,9 @@ class NewsContentComponent extends React.Component<Props, State>{
   learnMoreButtonClick(url){
     window.open(url,'_blank');
   }
+  createContent(content){
+    return {__html: content};
+  }
   render(){
     const {news} = this.props;
     const newsId = parseInt(this.path[2]);
@@ -34,7 +37,8 @@ class NewsContentComponent extends React.Component<Props, State>{
           <h2 style={{margin:'0px',padding:'10px', backgroundColor:'#F6F0F0'}}>{newsContent.title}</h2>
         </div>
         <div style={{backgroundColor:"#fff",width:'100%',padding:'5px 0 10px 5px',minHeight:360, position:'relative'}}>
-          {newsContent.content}
+          <div dangerouslySetInnerHTML={this.createContent(newsContent.content)}>
+          </div>
           <RaisedButton  label="Learn More"
             backgroundColor='#1b4583' 
             labelColor='#fff' 
