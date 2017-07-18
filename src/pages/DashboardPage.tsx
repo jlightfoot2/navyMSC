@@ -59,6 +59,12 @@ export default class DashboardPage extends React.Component<Props, State>{
       padding : '35px 5px 0',
       minHeight: this.setMaxHeight()
     }
+    const versionStyle = {
+      textAlign : 'center',
+      width : '100%',
+      color : '#fff',
+      padding : '5px'
+    }
     const fbIconSize = (this.props.appPage.screen.height > 700 ) ? 90 : 78;
     return (
       <div style={{position:'relative'}}>
@@ -85,6 +91,7 @@ export default class DashboardPage extends React.Component<Props, State>{
             <Link to="/ask-the-chief"><img src={chiefImg} style={{width:'100%'}} /></Link>
           </div>
         </div>
+        <div style={versionStyle}>version 1.0</div>
       </div>
     )
   }
