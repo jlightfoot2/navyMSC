@@ -1,4 +1,5 @@
 import {schema, normalize} from 'normalizr';
+import 'whatwg-fetch';
 
 const newsSchema = new schema.Entity('news');
 const newsArraySchema = new schema.Array(newsSchema);
@@ -53,26 +54,31 @@ export default function fetchNews() {
     // In this case, we return a promise to wait for.
     // This is not required by thunk middleware, but it is convenient for us.
     var newsItems = [];
-    return fetch('https://www.navy.mil/local/localStoryRSS.asp?id=17').then(function(resp){ return resp; }).then(function(response){
+    return fetch('http://www.navy.mil/local/localStoryRSS.asp?id=17').then(function(resp){ return resp; }).then(function(response){
         // parse response
         return response.text().then(function(data){
           var oParser = new DOMParser();
-          var oDOM = oParser.parseFromString(data, "text/xml");
+          var oDOM = oParser.parseFromString(data, "application/xml");
           var xmlItems = oDOM.getElementsByTagName('item');
+          //console.log(xmlItems); 
           Object.keys(xmlItems).map(function(iter){
-            newsItems.push({
-              id : parseInt(iter)+1,
-              title : xmlItems[iter].getElementsByTagName("title")[0].childNodes[0].nodeValue,
-              content : xmlItems[iter].getElementsByTagName("description")[0].childNodes[0].nodeValue,
-              link : xmlItems[iter].getElementsByTagName("link")[0].childNodes[0].nodeValue
-            });
-            //console.log(xmlItems[iter]); 
+            if( xmlItems[iter].children !== undefined){
+                newsItems.push({
+                id : parseInt(iter)+1,
+                title : xmlItems[iter].children[0].textContent,
+                content : xmlItems[iter].children[1].textContent,
+                link : xmlItems[iter].children[2].textContent
+              });
+            }else{
+              console.log(xmlItems[iter],'children not defined');
+            }
           });
           let normalizedNews = normalize(newsItems, newsArraySchema),
           defaultNews = normalizedNews.entities.news,
           defaultNewsIds = normalizedNews.result;
           dispatch(receiveNews(defaultNews));
           dispatch(setNewsIds(defaultNewsIds));
+          return this;
         });
     });
   }
