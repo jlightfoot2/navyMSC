@@ -60,7 +60,6 @@ export default function fetchNews() {
           var oParser = new DOMParser();
           var oDOM = oParser.parseFromString(data, "application/xml");
           var xmlItems = oDOM.getElementsByTagName('item');
-          //console.log(xmlItems); 
           Object.keys(xmlItems).map(function(iter){
             if( xmlItems[iter].children !== undefined){
                 newsItems.push({

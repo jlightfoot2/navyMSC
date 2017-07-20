@@ -19,7 +19,7 @@ require('./index.html'); //load and emit index.html
 const store = createStore(reducer,applyMiddleware(thunk));
 
 store.subscribe(() => {
-    console.log(store.getState()); // list entire state of app
+    //console.log(store.getState()); // list entire state of app
 });
 store.dispatch(fetchNews());
 
