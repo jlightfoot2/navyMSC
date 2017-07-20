@@ -69,8 +69,6 @@ export default function fetchNews() {
                 content : xmlItems[iter].children[1].textContent,
                 link : xmlItems[iter].children[2].textContent
               });
-            }else{
-              console.log(xmlItems[iter],'children not defined');
             }
           });
           let normalizedNews = normalize(newsItems, newsArraySchema),
