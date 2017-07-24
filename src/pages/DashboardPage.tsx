@@ -91,7 +91,7 @@ export default class DashboardPage extends React.Component<Props, State>{
             <Link to="/ask-the-chief"><img src={chiefImg} style={{width:'100%'}} /></Link>
           </div>
         </div>
-        <div style={versionStyle}>version 1.0</div>
+        <div style={versionStyle}>version 1.0.1</div>
       </div>
     )
   }
