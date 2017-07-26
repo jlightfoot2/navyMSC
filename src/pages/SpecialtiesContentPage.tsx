@@ -1,9 +1,9 @@
 /**
  * @file SpecialtiesContentPage.tsx
  * 
- 
  * Name: SpecialtiesContentPage.tsx
  * 
+ * Page for displaying the content of the Specialties (once selected from the Specialties List)
  *
  * Modified by Daniel Gilfoy <daniel.gilfoy@tee2.org> on 7/25/2017.
  *

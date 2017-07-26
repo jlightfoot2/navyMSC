@@ -1,10 +1,9 @@
 /**
  * @file DetailingContent.tsx
- * 
+ *  Displays the content of a Detailing - not the list of detailing, but the specific item clicked
  
  * Name: DetailingContent.tsx
  * 
- *
  * Modified by Daniel Gilfoy <daniel.gilfoy@tee2.org> on 7/25/2017.
  *
  * Navy MSC Cordova App

@@ -1,9 +1,9 @@
 /**
  * @file BasicPage.tsx
  * 
- 
  * Name: BasicPage.tsx
  * 
+ * Basic template for a page
  *
  * Modified by Daniel Gilfoy <daniel.gilfoy@tee2.org> on 7/25/2017.
  *
@@ -39,8 +39,7 @@ export interface Props {
   setPageTitle(title:string): void;
 }
 
-export interface State {
-}
+export interface State {}
 
 export default class BasicPage extends React.Component<Props, State>{
   render(){

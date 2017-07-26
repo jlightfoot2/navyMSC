@@ -1,10 +1,10 @@
 /**
  * @file index.tsx
  * 
- 
  * Name: index.tsx
  * 
- *
+ * Main entry point into the app
+ * 
  * Modified by Daniel Gilfoy <daniel.gilfoy@tee2.org> on 7/25/2017.
  *
  * Navy MSC Cordova App
@@ -57,6 +57,7 @@ store.subscribe(() => {
 });
 store.dispatch(fetchNews());
 
+// creates the render for the app and passes the store into the Provider.
 const render = (Component: any) => {
     ReactDOM.render(
         <AppContainer>
@@ -69,7 +70,7 @@ const render = (Component: any) => {
         document.getElementById("spaApp")
     );
 }
-
+// renders the app.
 render(App);
 // Hot Module Replacement API. Only used when running the dev server.
 if ((module as any).hot) {

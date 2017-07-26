@@ -1,7 +1,6 @@
 /**
  * @file AskChiefPage.tsx
  * 
- 
  * Name: AskChiefPage.tsx
  * 
  *

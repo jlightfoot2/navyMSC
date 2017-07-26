@@ -1,9 +1,9 @@
 /**
  * @file ResourcesPage.tsx
  * 
- 
  * Name: ResourcesPage.tsx
  * 
+ * Resource Page, for displaying the list of resources.
  *
  * Modified by Daniel Gilfoy <daniel.gilfoy@tee2.org> on 7/25/2017.
  *

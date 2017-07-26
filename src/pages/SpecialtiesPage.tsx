@@ -1,9 +1,9 @@
 /**
  * @file SpecialtiesPage.tsx
  * 
- 
  * Name: SpecialtiesPage.tsx
  * 
+ * Page that lists the specialties out to be selected for more details (displayed in SpecialtiesContent)
  *
  * Modified by Daniel Gilfoy <daniel.gilfoy@tee2.org> on 7/25/2017.
  *
@@ -41,16 +41,9 @@ export interface Props {
   setPageTitle(title: string): void;
 }
 
-export interface State {
-  
-}
+export interface State {}
 
 export default class SpecialtiesPage extends React.Component<Props, State>{
-
-  componentWillMount(){
-    this.props.setPageTitle("Specialties");
-  }
-
   render(){
     return ( 
       <div>

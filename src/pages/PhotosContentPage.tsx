@@ -1,9 +1,9 @@
 /**
  * @file PhotosContentPage.tsx
  * 
- 
  * Name: PhotosContentPage.tsx
  * 
+ * The Around the Globe content page, for displaying a photo and the related text
  *
  * Modified by Daniel Gilfoy <daniel.gilfoy@tee2.org> on 7/25/2017.
  *
