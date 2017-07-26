@@ -1,5 +1,3 @@
 # navy-msc
 
-https://dgilfoy.github.io/navyMSC/cordova/www  
-
-Looks best in small browser window since it's a mobile app.
+Cordova app for the U.S Navy Medical Service Corps
