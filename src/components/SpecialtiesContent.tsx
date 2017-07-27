@@ -49,6 +49,7 @@ class SpecialtiesComponent extends React.Component<Props, State>{
 
   }
   componentWillMount(){
+    window.scrollTo(0,0);
     this.path = this.props['location'].pathname.split('/');
   }
   createContent(content){
@@ -62,10 +63,10 @@ class SpecialtiesComponent extends React.Component<Props, State>{
     })[0];
     return ( 
       <div>
-        <div style={{width:'90%', margin:'0 auto',color:'#fff', paddingTop:50}}>
-          <h2 style={{marginTop:0,paddingTop:10}}>{specialtyContent.title}</h2>
+        <div style={{width:'100%', margin:'0 auto',color:'#fff', paddingTop:50, backgroundColor: '#1b4583'}}>
+          <h2 style={{marginTop:0,padding:'30px 20px'}}>{specialtyContent.title}</h2>
         </div>
-        <div style={{backgroundColor:"#fff",width:'100%',padding:'10px',minHeight:540}} 
+        <div style={{backgroundColor:"#fff",width:'94.5%',padding:'10px',minHeight:540}} 
           dangerouslySetInnerHTML={this.createContent(specialtyContent.content)}>
         </div>
       </div>

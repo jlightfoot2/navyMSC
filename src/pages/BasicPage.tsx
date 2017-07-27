@@ -33,7 +33,6 @@
  * Original Software: robert.a.kayl.civ@mail.mil
  */ 
 import * as React from 'react';
-//import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 
 export interface Props {
   setPageTitle(title:string): void;

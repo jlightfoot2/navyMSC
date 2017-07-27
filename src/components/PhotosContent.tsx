@@ -50,6 +50,7 @@ class PhotosContentComponent extends React.Component<Props, State>{
 
   }
   componentWillMount(){
+    window.scrollTo(0,0);
     this.path = this.props['location'].pathname.split('/');
   }
   learnMoreButtonClick(url){

@@ -1,9 +1,9 @@
 /**
  * @file AroundGlobePage.tsx
  * 
- 
  * Name: AroundGlobePage.tsx
  * 
+ * Displays a list of photos that are clickable (see PhotosContent Page)
  *
  * Modified by Daniel Gilfoy <daniel.gilfoy@tee2.org> on 7/25/2017.
  *

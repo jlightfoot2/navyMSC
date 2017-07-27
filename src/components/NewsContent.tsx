@@ -36,6 +36,7 @@ import * as React from 'react';
 import { withRouter } from 'react-router-dom';
 import {NewsInterface} from '../res/data/news';
 import RaisedButton from 'material-ui/RaisedButton';
+import ExternalLink from './ExternalLink';
 
 export interface Props {
   news: NewsInterface[];
@@ -73,11 +74,13 @@ class NewsContentComponent extends React.Component<Props, State>{
         <div style={{backgroundColor:"#fff",width:'100%',padding:'5px 0 10px 5px',minHeight:360, position:'relative'}}>
           <div dangerouslySetInnerHTML={this.createContent(newsContent.content)}>
           </div>
-          <RaisedButton  label="Learn More"
-            backgroundColor='#1b4583' 
-            labelColor='#fff' 
-            style={{minWidth:'60%', maxWidth:'80%', display:'block', position:'absolute',left:'20%',bottom:'10px',cursor:'pointer'}}
-            onTouchTap={()=>this.learnMoreButtonClick(newsContent.link)} />  
+          <ExternalLink target="_system" absolutePath={newsContent.link}>
+            <RaisedButton  label="Learn More"
+              backgroundColor='#1b4583' 
+              labelColor='#fff' 
+              style={{minWidth:'60%', maxWidth:'80%', display:'block', position:'absolute',left:'20%',bottom:'10px',cursor:'pointer'}}
+              />  
+            </ExternalLink>
         </div>
       </div>
     );

@@ -46,6 +46,7 @@ import {
   buttonsWrapper,
   versionStyle
 } from '../styles/dashboardStyles';
+import ExternalLink from '../components/ExternalLink';
 
 const ourStoryImage = require("../res/images/ui/button-our-story.png");
 const specialtiesImage = require("../res/images/ui/button-specialties.png");
@@ -74,7 +75,7 @@ export default class DashboardPage extends React.Component<Props, State>{
     }
     const fbIconSize = (this.props.appPage.screen.height > 700 ) ? 90 : 78;
     return (
-      <div style={{position:'relative'}}>
+      <div style={{position:'relative',backgroundColor: '#1b4583'}}>
        <AppLogoBar hasPaddingTop={false}/>
         <div style={{...buttonsWrapper,...buttonWrapperMinHeight}}>
           <div style={buttonRowSpacing} className="clearfix">
@@ -90,7 +91,7 @@ export default class DashboardPage extends React.Component<Props, State>{
             <Link to="/resources"><img src={resourcesImage} style={{...smallImage,...smallImageRight}}/></Link>
           </div>
           <div style={{width:'80%',margin:'0 auto', maxWidth:fbIconSize, height:fbIconSize, paddingBottom:20}} className="clearfix">
-            <a href="https://www.facebook.com/groups/usnavymsc/" target="_blank"><img style={{maxWidth:fbIconSize, marginRight:'20%'}} src={fbImage}/></a>
+            <ExternalLink absolutePath="https://www.facebook.com/groups/usnavymsc/" target="_system"><img style={{maxWidth:fbIconSize, marginRight:'20%'}} src={fbImage}/></ExternalLink>
           </div>
         </div>
         <div style={askChiefWrapper}>
@@ -98,7 +99,7 @@ export default class DashboardPage extends React.Component<Props, State>{
             <Link to="/ask-the-chief"><img src={chiefImg} style={{width:'100%'}} /></Link>
           </div>
         </div>
-        <div style={versionStyle}>version 1.0.1</div>
+        <div style={versionStyle}>version 1.0.2</div>
       </div>
     )
   }

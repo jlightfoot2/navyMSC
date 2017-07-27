@@ -116,11 +116,12 @@ class PdfViewerPage extends React.Component<Props, State>{
           <div style={{width:this.props.appPage.screen.width-25,margin:'0 auto'}}>
             <ReactPDF style={{marginLeft:25}}
               file={this.file} 
+              loading={'Loading the PDF, this can take a few seconds.'}
               width={this.props.appPage.screen.width-25} 
               pageIndex={this.state.pageIndex} 
               onDocumentLoad={(t)=>{this.onDocumentLoad(t)}}
               onPageLoad={(p)=>{this.onPageLoad(p)}}
-              scale={0.5}
+              scale={1}
             />
           </div>
         </div>

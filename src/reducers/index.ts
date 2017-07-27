@@ -1,9 +1,9 @@
 /**
  * @file index.ts
  * 
- 
  * Name: index.ts
  * 
+ * main reducers page, sets up the data for the app in the store (see actions)
  *
  * Modified by Daniel Gilfoy <daniel.gilfoy@tee2.org> on 7/25/2017.
  *

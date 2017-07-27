@@ -72,11 +72,11 @@ export default class OurStoryPage extends React.Component<Props, State>{
               occupational and preventive medicine units, material and logistic support commands and headquarters commands.
             </p>
             <h2>Our Mission</h2>
-            <p>The Medical Service Corps actively supports the Navy and Marine Corps team and Navy Medicine’s 
+            <p>The Medical Service Corps actively supports the Navy and Marine Corps team and Navy Medicine's 
               readiness and health benefits missions with a community of active duty and reserve component professionals.
             </p>
             <h2>Our Vision</h2>
-            <p>One Corps of many specialties meeting today’s needs and tomorrow’s challenges.</p>
+            <p>One Corps of many specialties meeting today's needs and tomorrow's challenges.</p>
 
             <h2>Directors of the Medical Service Corps</h2>
             <ul style={{listStyle:'none',paddingLeft: '5px'}}>

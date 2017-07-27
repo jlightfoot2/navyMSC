@@ -3,6 +3,8 @@
  * 
  * Name: AskChiefPage.tsx
  * 
+ * Page that displays explanitory text and a button that will open up default mail app to send 
+ * an email to the Corps Chief.  
  *
  * Modified by Daniel Gilfoy <daniel.gilfoy@tee2.org> on 7/25/2017.
  *
@@ -36,18 +38,21 @@ import AppTitleBar from '../components/AppTitleBar';
 import AppLogoBar  from '../components/AppLogoBar';
 import RaisedButton from 'material-ui/RaisedButton';
 
-export interface Props {}
+export interface Props {
+  view;
+}
 export interface State {}
 
 export default class AskChiefPage extends React.Component<Props, State>{
  
   render(){
+    const screenHeight = this.props['appPage'].height;
     return (
-      <div>
+      <div style={{backgroundColor: '#1b4583', minHeight:screenHeight}}>
         <AppTitleBar title="Ask the Corps Chief" />
         <AppLogoBar hasPaddingTop={true}/>
         <div style={{backgroundColor:"#fff",padding:'15px', position:'relative', minHeight:'350px'}}>
-          <p>For questions or concerns, please feel free to send an email to the Corps Chief’s Office by tapping the button below.</p>
+          <p>For questions or concerns, please feel free to send an email to the Corps Chief's Office by tapping the button below.</p>
           <RaisedButton  label="Email Corps Chief"
             backgroundColor='#1b4583' 
             labelColor='#fff' 

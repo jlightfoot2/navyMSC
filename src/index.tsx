@@ -50,7 +50,11 @@ import reducer from './reducers';
 injectTapEventPlugin();
 require('./index.html'); //load and emit index.html
 
-const store = createStore(reducer,applyMiddleware(thunk));
+const thunkArgs = {
+  isCordova: __IS_CORDOVA_BUILD__,
+  platform: __IS_CORDOVA_BUILD__ ? (window as any).device.platform.toLowerCase() : 'browser'
+}
+const store = createStore(reducer,applyMiddleware(thunk.withExtraArgument(thunkArgs)));
 
 store.subscribe(() => {
     //console.log(store.getState()); // list entire state of app
@@ -71,10 +75,17 @@ const render = (Component: any) => {
     );
 }
 // renders the app.
-render(App);
-// Hot Module Replacement API. Only used when running the dev server.
-if ((module as any).hot) {
-  (module as any).hot.accept('./components/AppTheme', () => {
+if(__IS_CORDOVA_BUILD__){
+  document.addEventListener("deviceready", function(){
+    // document.addEventListener("menubutton", onMenuKeyDown, false);
     render(App);
-  });
+  })
+} else {
+  render(App);
+  // Hot Module Replacement API. Only used when running the dev server.
+  if ((module as any).hot) {
+    (module as any).hot.accept('./components/AppTheme', () => {
+      render(App);
+    });
+  }
 }

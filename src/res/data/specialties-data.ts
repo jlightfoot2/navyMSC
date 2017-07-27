@@ -329,11 +329,13 @@ const data =[
     title:'Education and Training Management',
     content:`
       <h4>Who we are:</h4> 
-      <p>The Education and Training Management Subspecialty is a subset of the Resource Management and Analysis subspecialty (3000) which will provide a command with an Officer formally skilled in education and training management within the Department of Defense. The ETMS 3150 subspecialty supports the Navy’s vast education and training mission with Officers prepared to support both schoolhouse and staff development academic activities.</p> 
+      <p>The Education and Training Management Subspecialty is a subset of the Resource Management and Analysis subspecialty (3000) which will provide a command with an Officer formally 
+      skilled in education and training management within the Department of Defense. The ETMS 3150 subspecialty supports the Navy&#39;s vast education and training mission with Officers 
+      prepared to support both schoolhouse and staff development academic activities.</p> 
       <h4>Where we serve:</h4> 
-      <p>3150 officers perform in broad and diverse roles, such as Department Heads, Program Managers, and in staff positions including Defense Health Agency, NMPDC, NMTSC, BUMED and at MTF’s.</p>
+      <p>3150 officers perform in broad and diverse roles, such as Department Heads, Program Managers, and in staff positions including Defense Health Agency, NMPDC, NMTSC, BUMED and at MTF&#39;s.</p>
       <h4>Basic Requirements:</h4>
-      <p>The 3150 designation can be earned by either completing a Master’s degree from one of the three qualifying schools listed below or by serving 18 months in a qualifying billet.</p>  
+      <p>The 3150 designation can be earned by either completing a Master&#39;s degree from one of the three qualifying schools listed below or by serving 18 months in a qualifying billet.</p>  
       <h4>DUINS:</h4> 
       <p>Master of Arts in Education from the University of Memphis, Old Dominion University, and the University of Rhode Island.</p>
     `
@@ -451,7 +453,7 @@ const data =[
     content:`
       <p>Who we are: Navy Health Care Information Systems Officers provide leadership, managerial expertise and technical guidance in acquiring, developing, implementing, and maintaining clinical and business information systems. Though recruited as a Health Care Administrator, each Medical Service Corps (MSC) Officer was inspired to join the Health Care Information Systems community because of their desire to apply innovative thinking, engage in common interest of patient care through delivery of technology, and to be influential in joint service and Navy Executive Medicine as both a senior and junior officer. The Health Care Information Systems community touches every aspect of healthcare that is critical to the mission of technology solution delivery and provides the critical innovative thinking driving the path forward in healthcare delivery. The Health Care Information Systems Officer is actively engaged in every aspect of healthcare and is shaped for influential leadership roles where innovative thinking drives strategic planning and sustainment. Where we serve: The Health Care Information Systems Officers perform in broad and diverse roles, such as Department Heads, Program Managers, and in staff positions including OSD Health Affairs, Defense Health Agency, SPAWAR, and BUMED. They also support operational combat support, humanitarian assistance and disaster relief missions in support of Combatant Commanders, NATO, USAID, State department and others.</p> 
       <h4>Basic Requirements:</h4>
-      <p>At this time there is no required school. The Health Care Information Systems Officer’s subspecialty codes can be acquired through a minimum tour of on-the-job experience, service schools (Army 70D), and advanced education opportunities at the Naval Postgraduate School or other institutions.</p>
+      <p>At this time there is no required school. The Health Care Information Systems Officer's subspecialty codes can be acquired through a minimum tour of on-the-job experience, service schools (Army 70D), and advanced education opportunities at the Naval Postgraduate School or other institutions.</p>
       <h4>DUINS/Fellowships/Certifications:</h4> 
       <ul> 
         <li>Master of Science degree in Network Operations and Technology, Naval Postgraduate School </li> 
@@ -495,13 +497,13 @@ const data =[
     title:'Manpower Systems Analysis Management',
     content:`
       <p>Manpower and Personnel Analysts are Health Care Administrators who attain the requisite knowledge, skills, and abilities through formal education, training, or experience to lead Navy Medicine manpower, personnel, and human resources initiatives.</p>
-      <p><strong>“Manpower”</strong> refers to the billets required to perform a task or function. Manpower analysts determine the number of billets required, authorized, and available to operate, maintain, support, and provide training in meeting Navy Medicine’s mission. Manpower requirements (Spaces) are based on the range of operations during peacetime, low intensity conflict, and wartime. </p>
+      <p><strong>“Manpower”</strong> refers to the billets required to perform a task or function. Manpower analysts determine the number of billets required, authorized, and available to operate, maintain, support, and provide training in meeting Navy Medicine's mission. Manpower requirements (Spaces) are based on the range of operations during peacetime, low intensity conflict, and wartime. </p>
       <p><strong>“Personnel”</strong> refers to human capital management (Faces). Personnel factors are those human aptitudes (i.e. cognitive, physical, and sensory capabilities), knowledge, skills, abilities, and experience levels that are needed to properly perform job tasks. Personnel factors are used to develop the military occupational specialties and civilian job series.</p> 
       <p>Manpower Officers develop, analyze, and execute policies and strategic short-term and long-term plans to ensure that Navy Medicine is recruiting, training, utilizing, and retaining personnel in the most efficient and effective ways possible. As a result, Manpower Officers significantly contribute to operational readiness and value.</p> 
       <h4>HOW DO I JOIN THE MANPOWER AND PERSONNEL TEAM?</h4> 
       <p>There are three pathways to specialize in the Manpower and Personnel Community.<p>
       <ol>
-        <li>Complete Master’s degree at Naval Postgraduate School (NPS) in Monterey, CA. Screening includes:
+        <li>Complete Master's degree at Naval Postgraduate School (NPS) in Monterey, CA. Screening includes:
           <ol type="a">
             <li>Send college transcripts to NPS to receive an Academic Profile Code (APC). </li> 
             <li>Apply for Admission to NPS (Manpower Systems Analysis - 847) once APC is assigned. </li> 
@@ -511,7 +513,7 @@ const data =[
         <li>Experience. Selection for 3130 position and apply for subspecialty code after completion of three year tour. Completion of Manpower 101 course offered by BUMED M-14 is a required prerequisite.</li>
       </ol>
        <h4>WHERE AND HOW LONG IS THE TRAINING?</h4> 
-       <p>NPS in Monterey, CA is 7 quarters in length (21 months). Learn more about NPS and the curriculum at: http://my.nps.edu/web/gsbpp/manpower-systems-analysis Fellowships are one-year programs. Fellowship specifics are published in the annual DUINS BUMEDNOTE.</p>
+       <p>NPS in Monterey, CA is 7 quarters in length (21 months). Learn more about NPS and the curriculum <a href="http://my.nps.edu/web/gsbpp/manpower-systems-analysis">Here</a>. Fellowships are one-year programs. Fellowship specifics are published in the annual DUINS BUMEDNOTE.</p>
       <h4>WHAT IS MY PAYBACK?</h4> 
       <p>Typically, payback tours are 3-years for NPS and Fellowship, but review the annual BUMEDNOTE for specifics.</p>
       <h4>WHAT/WHERE ARE THE TYPICAL UTILIZATION TOURS?</h4> 
@@ -528,7 +530,7 @@ const data =[
       <h4>Where we serve</h4> 
       <p>Medical Logisticians hold key administrative and leadership positions within various Medical Treatment Facilities, the Fleet Marine Force (USMC), Hospital Ships, Expeditionary Medical Facilities, Staff Commands and a variety of naval activities worldwide.</p> 
       <h4>Basic Requirements</h4>
-      <p>Successfully complete the Navy’s Financial and Materiel Management Training Course (FMMTC). Additional information about FMMTC is available at: <a href="http://www.med.navy.mil/sites/nmpdc/courses/Pages/Financial">http://www.med.navy.mil/sites/nmpdc/courses/Pages/Financial</a> and Material Management.aspx.</p>
+      <p>Successfully complete the Navy's Financial and Materiel Management Training Course (FMMTC). Additional information about FMMTC is available <a href="http://www.med.navy.mil/sites/nmpdc/courses/Pages/Financial">Here</a> and Material Management.aspx.</p>
       <h4>DUINS/Fellowships/Certifications</h4>
       <ul>
         <li>Master of Business Administration with a concentration in Materiel Logistics Support at the Naval Postgraduate School, Monterey, CA  <ul>
@@ -645,11 +647,16 @@ const data =[
     title:'Operations Research and Analysis',
     content:`
       <h4>WHO WE ARE</h4> 
-      <p>The Operations Research (OR) community is a sub-specialty of Healthcare Administration that is composed of a small community of research analysts versed in the use of (OR), Engineering, and Management Science techniques. We provide independent analysis of programs, policies, and performance to decision makers at all levels within Navy Medicine, Health Affairs, and the Office of the Secretary of Defense. We are problem solvers performing analysis to find more efficient and effective ways to operate using simulation, forecasting, optimization, and other state of the art techniques to formulate a recommendation to leadership.</p>
+      <p>The Operations Research (OR) community is a sub-specialty of Healthcare Administration that is composed of a small community of research analysts versed in the use of (OR), Engineering, and 
+      Management Science techniques. We provide independent analysis of programs, policies, and performance to decision makers at all levels within Navy Medicine, Health Affairs, and the Office of the 
+      Secretary of Defense. We are problem solvers performing analysis to find more efficient and effective ways to operate using simulation, forecasting, optimization, and other state of the art 
+      techniques to formulate a recommendation to leadership.</p>
       <h4>BECOMING AN OPERATIONS RESEARCHER</h4>
-      <p>In order to specialize in Operations Research, a Master’s Degree from the Naval Postgraduate School (NPS) in Monterey, CA is required. There is a three-step process of screening: Transcripts sent to the Naval Postgraduate School (NPS) to receive an Academic Profile Code (APC) Apply for Admissions to NPS once APC has been established (process completed online) Apply for DUINS as set forth in the annual BUMEDNOTE 1520</p>
+      <p>In order to specialize in Operations Research, a Master's Degree from the Naval Postgraduate School (NPS) in Monterey, CA is required. There is a three-step process of screening: Transcripts sent to the Naval Postgraduate School (NPS) to receive an Academic Profile Code (APC) Apply for Admissions to NPS once APC has been established (process completed online) Apply for DUINS as set forth in the annual BUMEDNOTE 1520</p>
       <h4>WHERE AND HOW LONG IS THE TRAINING?</h4>
-      <p>Operations Research training is conducted at the Naval Postgraduate School (NPS) in Monterey, CA. The typical curriculum is 7-8 quarters in length depending on the amount of prerequisites that have been met and whether or not a mathematics refresher course is recommended. Joint Professional Military Education Phase I is also taught and may be completed during the curriculum. Learn more about NPS and the curriculum for Operations Analysis (Curriculum 360) at: <a href="http://www.nps.edu/Academics/Schools/GSOIS/Departments/OR/index.html">http://www.nps.edu/Academics/Schools/GSOIS/Departments/OR/index.html</a>.</p>
+      <p>Operations Research training is conducted at the Naval Postgraduate School (NPS) in Monterey, CA. The typical curriculum is 7-8 quarters in length depending on the amount of prerequisites that have 
+      been met and whether or not a mathematics refresher course is recommended. Joint Professional Military Education Phase I is also taught and may be completed during the curriculum. 
+      Learn more about NPS and the curriculum for Operations Analysis (Curriculum 360) <a href="http://www.nps.edu/Academics/Schools/GSOIS/Departments/OR/index.html">Here</a>.</p>
       <h4>WHAT IS MY PAYBACK?</h4> 
       <p>Typically 3-year maximum for NPS, but see the annual BUMED note for specifics. WHERE CAN I EXPECT TO DO MY PAYBACK? A typical payback tour will be at the BUMED in Fals Church, VA, but other locations include: Health Research Center, San Diego and Navy Medical Information Center, Norfolk, VA.. While these are the primary billets to be filled, consideration is also given to other analyst opportunities in locations such as Office of the Chief of Naval Operations/N81, and the Center for Naval Analysis.</p>
     `

@@ -52,6 +52,7 @@ class DetailingComponent extends React.Component<Props, State>{
 
   }
   componentWillMount(){
+    window.scrollTo(0,0);
     this.path = this.props['location'].pathname.split('/');
   }
   render(){
@@ -66,7 +67,7 @@ class DetailingComponent extends React.Component<Props, State>{
         <div style={{backgroundColor:"#fff",width:'100%',padding:'0 0 10px'}}>
           <div style={{width:'90%', margin:'0 auto'}}>
             <h2 style={{marginTop:0,textAlign:'center',paddingTop:10}}>{detailContent.dept}</h2>
-            <h3 style={{marginBottom: 0}}>{detailContent.name}</h3>
+            <h3 style={{marginBottom: 0, color: '#1b4583'}}>{detailContent.name}</h3>
             {detailContent.title.length > 0 ? <p style={{marginTop: 0}}>{detailContent.title}</p> : ''}
             <h4>Area</h4>
             <p>{detailContent.area}</p>
