@@ -51,8 +51,7 @@ injectTapEventPlugin();
 require('./index.html'); //load and emit index.html
 
 const thunkArgs = {
-  isCordova: __IS_CORDOVA_BUILD__,
-  platform: __IS_CORDOVA_BUILD__ ? (window as any).device.platform.toLowerCase() : 'browser'
+  isCordova: __IS_CORDOVA_BUILD__
 }
 const store = createStore(reducer,applyMiddleware(thunk.withExtraArgument(thunkArgs)));
 
